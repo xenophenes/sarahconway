@@ -1,0 +1,28 @@
+baseURL = ""
+canonifyurls = true
+DefaultContentLanguage = "en"
+languageCode = "en-us"
+relativeURLs = true
+title = "Sarah in San Diego"
+
+# 404 page is overridden via "/layouts/section/404.html"
+disableKinds = ["404", "taxonomy", "term"]
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.79.0"
+
+[build]
+  # Used by PurgeCSS
+  writeStats = true
+
+[markup]
+  # Allows raw HTML to be displayed
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  # None exist yet
+

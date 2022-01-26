@@ -1,0 +1,77 @@
+<!-- GLOBAL & PAGE-SPECIFIC HEAD CONTENT -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- <meta name="google-site-verification" content="Placeholder" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- If there is a unique site title, follow the format "Title | Site Title" -->
+{{ $title := (print .Params.title " | ") }}
+
+<!-- Title -->
+<title>{{ $title }}{{ $.Site.Title }}</title>
+
+<!-- Meta description definitions have the potential to have Markdown formatted content -->
+{{ $meta_description := .Params.meta_description | markdownify | plainify }}
+
+<!-- Meta Description -->
+<meta name="description" content={{ default "Website and code development in San Diego, contractual or by the hour. Hire an experienced professional willing to work solo or as a team player with over 10 years in the field creating websites for companies and organizations from every industry. Contact Sarah Conway today." $meta_description }} />
+
+<!-- Facebook Open Graph Meta Tags -->
+<meta property="og:title" content={{ default "Website & Coding Development | Sarah in San Diego" $title }} />
+<meta property="og:description" content={{ default "Placeholder" $meta_description }} />
+<meta property="og:image" content={{ default "https://sarahinsandiego.github.io/portfolio/img/logos/socialmedia_logo.png" .Params.opengraph_sharing_img }} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="627" />
+<meta property="og:url" content="https://sarahinsandiego.github.io/portfolio" />
+<meta property="og:site_name" content="Sarah in San Diego" />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:title" content={{ default "Website & Coding Development | Sarah in San Diego" $title }} />
+<meta name="twitter:description" content={{ default "Website and code development in San Diego, contractual or by the hour. Hire an experienced professional willing to work solo or as a team player with over 10 years in the field creating websites for companies and organizations from every industry. Contact Sarah Conway today." $meta_description }} />
+<meta name="twitter:image" content={{ default "https://sarahinsandiego.github.io/portfolio/img/logos/socialmedia_logo.png" .Params.twitter_sharing_img }} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@xenophenes" />
+<meta name="twitter:creator" content="@xenophenes" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+{{ $options := dict "inlineImports" true }}
+{{ $styles := resources.Get "css/styles.css" }}
+{{ $styles = $styles | resources.PostCSS $options }}
+
+{{ if  hugo.IsProduction  }}
+  {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+
+<link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+
+<!-- Page-specific head content -->
+{{ block "head" . }}{{ end }}
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://sarahinsandiego.github.io/portfolio",
+  "logo": "{{ default "https://sarahinsandiego.github.io/portfolio/img/logos/socialmedia_logo.png" .Params.logo }}",
+  "image": "{{ default "https://sarahinsandiego.github.io/portfolio/img/logos/socialmedia_logo.png" .Params.logo }}",
+  "email": "mailto:sarah.beth.conway@gmail.com",
+  "description": "{{ default "Website and code development in San Diego, contractual or by the hour. Hire an experienced professional willing to work solo or as a team player with over 10 years in the field creating websites for companies and organizations from every industry. Contact Sarah Conway today." $meta_description }}",
+  "name": "Sarah in San Diego",
+  "sameAs" : [
+    "https://www.github.com/sarahinsandiego"
+    "https://www.twitter.com/xenophenes"
+    "https://www.linkedin.com/in/sarah-conway-schnurr-05785570/"
+  ]
+}
+</script>

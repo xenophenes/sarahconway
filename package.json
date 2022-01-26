@@ -1,0 +1,46 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "This repository hosts the code powering https://sarahinsandiego.github.io/portfolio",
+  "main": "index.html",
+  "engines": {
+    "node": "16.x",
+    "yarn": "1.x"
+  },
+  "scripts": {
+    "build": "hugo",
+    "start": "hugo server --disableFastRender",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahinsandiego/portfolio.git"
+  },
+  "keywords": [
+    "Hugo",
+    "TailwindCSS",
+    "PostCSS"
+  ],
+  "author": "Sarah in San Diego",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/sarahinsandiego/portfolio/issues"
+  },
+  "homepage": "https://github.com/sarahinsandiego/portfolio#readme",
+  "dependencies": {
+    "alpinejs": "3.7.0",
+    "express": "^4.17.1",
+    "postcss-cli": "^8.3.1",
+    "postcss-purgecss": "^2.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "0.4.0",
+    "@tailwindcss/forms": "0.4.0",
+    "@tailwindcss/line-clamp": "0.3.1",
+    "@tailwindcss/typography": "0.5.0",
+    "autoprefixer": "10.4.2",
+    "postcss": "8.4.5",
+    "tailwindcss": "3.0.14"
+  }
+}

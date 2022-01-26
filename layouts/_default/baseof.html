@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global and page-specific head content -->
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <!-- Decorative content -->
+    <div class="bg-gradient-to-r from-yellow-300 to-cyan-500 py-8 w-full"></div>
+
+    <!-- Unique content displayed per-page -->
+    <main class="mt-14 mx-auto max-w-7xl px-4 sm:mt-14">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Bottom static footer  -->
+    {{ partial "footer.html" . }}
+
+    <!-- Global and page-specific JavaScript -->
+    {{ partial "scripts.html" . }}
+  </body>
+</html>
