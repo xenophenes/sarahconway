@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "/"
 canonifyurls = true
 DefaultContentLanguage = "en"
 languageCode = "en-us"
