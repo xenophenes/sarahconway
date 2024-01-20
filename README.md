@@ -1,6 +1,6 @@
-# https://sarahinsandiego.github.io/portfolio
+# https://xenophenes.github.io/sarahconway
 
-This repository hosts the code powering https://sarahinsandiego.github.io/portfolio.
+This repository hosts the code powering https://xenophenes.github.io/sarahconway.
 
 This website is powered by the [Hugo](https://gohugo.io/) framework, which is written in [Go](https://golang.org/) and makes use of the [Tailwind](https://tailwindcss.com/) CSS framework along with the Tailwind CSS [typography plugin](https://tailwindcss.com/docs/typography-plugin) and [form plugin](https://github.com/tailwindlabs/tailwindcss-forms). The build setup uses [PostCSS](https://postcss.org/) and [PurgeCSS](https://purgecss.com/) (when running the production build) for post-processing of CSS. Most of the code is written in HTML, JavaScript, and CSS. AlpineJS is used for easier handling of CSS interactions, transitions, and animations. JavaScript is compiled using Hugo's built-in ESBuild pipelines.
 
@@ -15,4 +15,4 @@ This website is powered by the [Hugo](https://gohugo.io/) framework, which is wr
 
 # Copyright
 
-&copy; 2022 Sarah in San Diego. All Rights Reserved.
+&copy; 2024 Sarah Conway. All Rights Reserved.

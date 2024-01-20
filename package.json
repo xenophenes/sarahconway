@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": "true",
-  "description": "This repository hosts the code powering https://sarahinsandiego.github.io/portfolio",
+  "description": "This repository hosts the code powering https://xenophenes.github.io/sarahconway",
   "main": "index.html",
   "engines": {
     "node": "16.x",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sarahinsandiego/portfolio.git"
+    "url": "git+https://github.com/xenophenes/sarahconway.git"
   },
   "keywords": [
     "Hugo",
@@ -25,11 +25,12 @@
   "author": "Sarah in San Diego",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/sarahinsandiego/portfolio/issues"
+    "url": "https://github.com/xenophenes/sarahconway/issues"
   },
-  "homepage": "https://github.com/sarahinsandiego/portfolio#readme",
+  "homepage": "https://github.com/xenophenes/sarahconway#readme",
   "dependencies": {
     "alpinejs": "3.7.0",
+    "async": "^3.2.5",
     "express": "^4.17.1",
     "postcss-cli": "^8.3.1",
     "postcss-purgecss": "^2.0.3"
@@ -39,7 +40,7 @@
     "@tailwindcss/forms": "0.4.0",
     "@tailwindcss/line-clamp": "0.3.1",
     "@tailwindcss/typography": "0.5.0",
-    "autoprefixer": "10.4.2",
+    "autoprefixer": "^10.4.2",
     "postcss": "8.4.5",
     "tailwindcss": "3.0.14"
   }
